@@ -17,17 +17,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # If your project is plain HTML/CSS/JS, no build step is needed
-      # If you use npm (React, Vue, etc.), uncomment these lines
-      # - name: Install dependencies
-      #   run: npm install
-      # - name: Build project
-      #   run: npm run build
+    
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./   # <-- this is the folder with your index.html
+          path: ./   
 
   deploy:
     runs-on: ubuntu-latest
